@@ -24,7 +24,6 @@ A lightweight desktop-based Java application that allows users to play, pause, r
 📦 Setup & Run
 
 1. Clone this repository
-
 git clone https://github.com/LeN3003/music-player.git
 cd music-player
 
