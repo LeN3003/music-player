@@ -16,7 +16,7 @@ A lightweight desktop-based Java application that allows users to play, pause, r
 📁 Requirements
 
 - Java Development Kit (JDK) 8 or higher
-- `.wav` audio files (other formats are **not supported**)
+- `.wav ,.mp3` audio files (other formats are **not supported**)
 
 
 📦 Setup & Run
@@ -26,8 +26,8 @@ git clone https://github.com/LeN3003/music-player.git
 cd music-player
 
 2. Compile the project
-javac SimpleMusicPlayer.java
+javac App.java
 
 3. Run the project
-java SimpleMusicPlayer
+java App
 
