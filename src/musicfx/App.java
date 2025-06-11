@@ -133,7 +133,7 @@ public class App extends Application {
         centerBox.setPadding(new Insets(10));
         root.setCenter(centerBox);
 
-        Scene scene = new Scene(root, 600, 250);
+        Scene scene = new Scene(root, 900, 500);
 
         scene.setOnDragOver(event -> {
             if (event.getGestureSource() != scene && event.getDragboard().hasFiles()) {
