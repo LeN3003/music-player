@@ -1,25 +1,4 @@
-
 package musicfx;
-
-// import javafx.application.Application;
-// import javafx.fxml.FXMLLoader;
-// import javafx.scene.Parent;
-// import javafx.scene.Scene;
-// import javafx.stage.Stage;
-
-// public class Main extends Application {
-// @Override
-// public void start(Stage primaryStage) throws Exception {
-// Parent root = FXMLLoader.load(getClass().getResource("musicfx.fxml"));
-// primaryStage.setTitle("Music Player");
-// primaryStage.setScene(new Scene(root));
-// primaryStage.show();
-// }
-
-// public static void main(String[] args) {
-// launch(args);
-// }
-// }
 
 import javafx.application.Application;
 import javafx.collections.MapChangeListener;
@@ -102,8 +81,6 @@ public class App extends Application {
         topBox.setPadding(new Insets(10));
         topBox.setAlignment(Pos.CENTER);
 
-        // HBox controlButtons = new HBox(10, btnOpen, btnPrev, btnPlay, btnPause,
-        // btnStop, btnNext);
         HBox controlButtons = new HBox(10, btnOpen, btnPrev, btnPlay, btnPause, btnStop, btnNext, btnRepeat);
 
         controlButtons.setPadding(new Insets(10));
@@ -120,13 +97,11 @@ public class App extends Application {
         albumArtView.setFitHeight(150);
         albumArtView.setPreserveRatio(true);
         albumArtView.setSmooth(true);
-        albumArtView.setVisible(false); // Initially hidden
+        albumArtView.setVisible(false);
 
         root = new BorderPane();
         root.setTop(topBox);
-        // root.setCenter(controlButtons);
         root.setBottom(bottomBox);
-        // root.setLeft(albumArtView); // Place it on the left
 
         VBox centerBox = new VBox(20, albumArtView, controlButtons);
         centerBox.setAlignment(Pos.CENTER);
@@ -260,10 +235,8 @@ public class App extends Application {
 
         mediaPlayer = new MediaPlayer(media);
 
-        // Bind volume slider to media player volume
         mediaPlayer.volumeProperty().bindBidirectional(volumeSlider.valueProperty());
 
-        // Update progress bar and time label during playback
         mediaPlayer.currentTimeProperty().addListener((obs, oldTime, newTime) -> {
             if (!progressBar.isValueChanging()) {
                 double current = mediaPlayer.getCurrentTime().toMillis();
@@ -276,13 +249,6 @@ public class App extends Application {
             }
         });
 
-        // mediaPlayer.setOnEndOfMedia(() -> {
-        // if (currentIndex < playlist.size() - 1) {
-        // currentIndex++;
-        // playMedia(playlist.get(currentIndex));
-        // }
-        // });
-
         mediaPlayer.setOnEndOfMedia(() -> {
             if (isRepeat) {
                 mediaPlayer.seek(Duration.ZERO);
@@ -293,7 +259,6 @@ public class App extends Application {
             }
         });
 
-        // Allow seeking with the progress bar
         progressBar.valueChangingProperty().addListener((obs, wasChanging, isChanging) -> {
             if (!isChanging && mediaPlayer != null) {
                 double total = mediaPlayer.getTotalDuration().toMillis();

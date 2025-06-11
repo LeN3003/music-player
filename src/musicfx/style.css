@@ -1,31 +1,47 @@
-/* style.css */
-
 .root {
+  font-family: "Segoe UI", sans-serif;
   -fx-font-family: "Segoe UI", sans-serif;
+
+  background-color: #f0f0f0;
   -fx-background-color: #f0f0f0;
+
+  padding: 20px;
   -fx-padding: 20;
 }
 
 .button {
+  background-color: #2e8b57;
   -fx-background-color: #2e8b57;
+
+  color: white;
   -fx-text-fill: white;
+
+  font-weight: bold;
   -fx-font-weight: bold;
 }
 
 .button:hover {
+  background-color: #3cb371;
   -fx-background-color: #3cb371;
 }
 
 .label {
+  font-size: 14px;
   -fx-font-size: 14px;
 }
 
 .title {
+  font-size: 24px;
   -fx-font-size: 24px;
+
+  font-weight: bold;
   -fx-font-weight: bold;
+
+  padding: 10px 0 20px 0;
   -fx-padding: 10 0 20 0;
 }
 
 .slider {
+  width: 300px;
   -fx-pref-width: 300;
 }
