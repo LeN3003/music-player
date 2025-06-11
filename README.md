@@ -5,15 +5,13 @@ A lightweight desktop-based Java application that allows users to play, pause, r
 
 🛠 Features
 
-- Play `.wav` audio files
+- Play `.wav, .mp3` audio files
 - Pause and resume playback
 - Loop music playback continuously
-- Select files using a file chooser dialog
-- Intuitive GUI with custom icons and color-coded buttons
 
 
 📷 UI Preview
-![Music Player Screenshot](./screenshot.png)
+![Music Player Screenshot](./mpscreenshot.png)
 
 📁 Requirements
 
