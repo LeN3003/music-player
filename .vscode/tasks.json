@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build JavaFX",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "--module-path",
+                "C:/Program Files/Java/javafx-sdk-21.0.7/lib",
+                "--add-modules",
+                "javafx.controls,javafx.media",
+                "-d",
+                "out",
+                "src/musicfx/App.java"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run JavaFX",
+            "type": "shell",
+            "command": "java",
+            "args": [
+                "--module-path",
+                "C:/Program Files/Java/javafx-sdk-21.0.7/lib",
+                "--add-modules",
+                "javafx.controls,javafx.media",
+                "-cp",
+                "out",
+                "musicfx.App"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}
